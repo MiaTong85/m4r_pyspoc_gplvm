@@ -1,0 +1,90 @@
+ReducedStatistics:
+  "/Users/tongxinran/py-spoc/working_analyses/hjResearch_2025/summary_stats/distance_distrib_stats.py":
+    DistanceDistributionBasicSummarize:
+      schemes:
+        cosine_distrib_meancentroid:
+          metric: cosine
+          stats: 
+            - std
+            - mean
+            - iqr
+          point: global_mean_centroid
+        euclidean_distrib_meancentroid:
+          metric: euclidean
+          stats: 
+            - std
+            - mean
+            - iqr
+          point: global_mean_centroid
+        canberra_distrib_meancentroid:
+          metric: canberra
+          stats: 
+            - std
+            - mean
+            - iqr
+          point: global_mean_centroid
+        cosine_skew_meancentroid:
+          metric: cosine
+          stats: 
+            - skew
+          point: global_mean_centroid
+        euclidean_skew_meancentroid:
+          metric: euclidean
+          stats: 
+            - skew
+          point: global_mean_centroid
+        canberra_kurt_meancentroid:
+          metric: canberra
+          stats: 
+            - kurtosis
+          point: global_mean_centroid
+        cosine_kurt_meancentroid:
+          metric: cosine
+          stats: 
+            - kurtosis
+          point: global_mean_centroid
+        euclidean_kurt_meancentroid:
+          metric: euclidean
+          stats: 
+            - kurtosis
+          point: global_mean_centroid
+        canberra_kurt_meancentroid:
+          metric: canberra
+          stats: 
+            - kurtosis
+          point: global_mean_centroid
+    DistanceDistributionModesSummarize:
+      schemes:
+        corr_peaks_meancentroid:
+          metric: correlation
+          point: global_mean_centroid
+          type: kde
+        euclidean_peaks_meancentroid:
+          metric: euclidean
+          point: global_mean_centroid
+          type: kde
+        canberra_peaks_meancentroid:
+          metric: canberra
+          point: global_mean_centroid
+          type: kde
+Statistics:
+    pyspoc.statistics.basic:
+        Covariance:
+            schemes:
+                empirical:
+                    estimator: EmpiricalCovariance
+Reducers:
+  "/Users/tongxinran/py-spoc/working_analyses/hjResearch_2025/summary_stats/feature_covariance_stats.py":
+    MaxCovPerFeature:
+        schemes:
+          max_min_median:
+            stats: 
+              - max
+              - min
+              - median
+    EigenAMGMRatio:
+      schemes:
+        eigen_amgm:        
+    EigenEntropy:
+      schemes:
+        eigen_entropy:
